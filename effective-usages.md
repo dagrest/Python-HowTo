@@ -85,6 +85,23 @@ dog1 = Dog('rocky', 4)
 dog2 = Dog('fifi', 2)
 print(dog1 > dog2)      # True
 ```
+  
+# `**args & **kwargs`
+
+* ### `*args` allows to functions receive any number of values, that will be stored in args
+```python
+def test(a, b, *args):
+  print(f'{a=} {b=} {args=}')
+
+test(1,2,3,4,5)  # a=1 b=2 args=(3,4,5)
+```
+* ### `**kwargs` allows to functions receive any number of key-values parameters, that will be stored in kwargs
+```python
+def test(a, b, **kwargs):
+  print(f'{a=} {b=} {kwargs=}')
+
+test(a=1, b=2, c=3, d=4)    # a=1 b=2 kwargs={'c': 3, 'd': 4}
+```
 
 
 
