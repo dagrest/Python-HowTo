@@ -37,6 +37,28 @@ set1 = {i for i in range(1,4)}          # {1,2,3}
 
 d1 = {i:i**2 for i in range(1,4)}       # {1:1, 2:4, 3:9}
 ```
+  
+### Ternary opearator
+```python
+score = 57
+if score > 90:
+  grade = 'A*'
+elif score > 50:
+  grade = 'pass'
+else:
+  grade = 'fail'
+
+# grade = 'pass'
+
+# Regualr block: if-elif-else
+
+score = 57
+grade = 'A*' if score>90 else 'pass' if score>50 else 'fail'
+
+# grade = 'pass'
+```
+
+
 
 ```python
 ```
