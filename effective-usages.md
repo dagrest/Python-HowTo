@@ -1,4 +1,4 @@
-# Unpack TUPLE + unpack TUPLE with *
+# 1. Unpack TUPLE + unpack TUPLE with *
 
 * ### Unpack tuple to initialize several variables:  
 ```python
@@ -15,7 +15,7 @@ first, second, *others = programming_languages
 # others = ['C#', 'Java', 'Pyhton', 'Go']
 ```
   
-# List generator | Dictionary/Set genarator
+# 2. List generator | Dictionary/Set genarator
 
 * ### Generate list in one line
 ```python
@@ -37,7 +37,7 @@ set1 = {i for i in range(1,4)}          # {1,2,3}
 d1 = {i:i**2 for i in range(1,4)}       # {1:1, 2:4, 3:9}
 ```
   
-# Ternary opearator
+# 3. Ternary opearator
 
 * ### Regualr block: if-elif-else
 ```python
@@ -59,7 +59,7 @@ grade = 'A*' if score>90 else 'pass' if score>50 else 'fail'
 # grade = 'pass'
 ```
   
-# 'Magic' methods in Python classes
+# 4. 'Magic' methods in Python classes
 ```python
 class Dog():
   def __init__(self, name, age):
@@ -86,7 +86,7 @@ dog2 = Dog('fifi', 2)
 print(dog1 > dog2)      # True
 ```
   
-# `**args & **kwargs`
+# 5. `**args & **kwargs`
 
 * ### `*args` allows to functions receive any number of values, that will be stored in args
 ```python
@@ -103,6 +103,76 @@ def test(a, b, **kwargs):
 test(a=1, b=2, c=3, d=4)    # a=1 b=2 kwargs={'c': 3, 'd': 4}
 ```
 
+# 6. Work with several .py files
+How to import function from another file
+* ### helper.py file
+```python
+def test():
+  print('test is called')
+```
+* ### main.py file
+```python
+from helper import test
+test()    # test is called
+```
+
+# 7. `if __name__ == ‘__main__’`
+Run specified code (`if __name__ == ‘__main__’`) only if the file containing this `if` statement was run directly
+* ### helper.py file
+```python
+# helper.py
+def test123():
+  print('test123 is called')
+
+if __name__ == '__main__':
+  # this line only runs if we run helper.py DIRECTLY
+  print('print statement from helper.py')
+```
+* ### main.py file
+```python
+# main.py
+from helper import *
+
+test123()    # test123 is called
+```
+
+# 8. True | False values
+* ### 0, if falsy, and evaluated as False
+```python
+if 0: print('this wont print')
+```
+* ### non-null values evaluated as True
+```python
+if 1: print('this prints')
+if 2: print('this prints')
+if 100: print('this prints')
+if -1: print('this prints')
+if 3.14: print('this prints')
+```
+* ### empty sequences are falsy and evaluated as False
+```python
+if '': print('this wont print')
+if []: print('this wont print')
+if {}: print('this wont print')
+if set(): print('this wont print')
+```
+* ### non-empty sequences are truthy and evaluated as True
+```python
+if 'a': print('this prints')
+if [1]: print('this prints')
+if {2:3}: print('this prints')
+if {1,2}: print('this prints')
+```
+* ### None is flasy and evaluated as False
+```python
+obj = None
+if obj: print('this wont print')
+```
+* ### object are truthy and evaluated as True
+```python
+obj = Dog()
+if obj: print('this prints')
+```
 
 
 ```python
