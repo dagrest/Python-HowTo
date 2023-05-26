@@ -1,13 +1,13 @@
 # Unpack TUPLE + unpack TUPLE with *
 
-### Unpack tuple to initialize several variables:  
+* ### Unpack tuple to initialize several variables:  
 ```python
 person = ['james', 25, 'secret service']
 name, age, occupation = person
 # name='james, age=25, occupation='secret service'
 ```  
   
-### Add * before variable to unpack all other values into this variable
+* ### Add * before variable to unpack all other values into this variable
 ```python
 programming_languages = ['C', 'C++', 'C#', 'Java', 'Pyhton', 'Go']
 first, second, *others = programming_languages
@@ -15,7 +15,7 @@ first, second, *others = programming_languages
 # others = ['C#', 'Java', 'Pyhton', 'Go']
 ```
   
-### List generator | Dictionary/Set genarator
+# List generator | Dictionary/Set genarator
 ```python
 # Generate list in one line
 
@@ -38,7 +38,7 @@ set1 = {i for i in range(1,4)}          # {1,2,3}
 d1 = {i:i**2 for i in range(1,4)}       # {1:1, 2:4, 3:9}
 ```
   
-### Ternary opearator
+# Ternary opearator
 ```python
 score = 57
 if score > 90:
@@ -58,7 +58,7 @@ grade = 'A*' if score>90 else 'pass' if score>50 else 'fail'
 # grade = 'pass'
 ```
   
-### 'Magic' methods in Python classes
+# 'Magic' methods in Python classes
 ```python
 class Dog():
   def __init__(self, name, age):
