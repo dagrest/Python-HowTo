@@ -2,7 +2,7 @@
 
 ### Unpack tuple to initialize several variables:  
 ```python
-person = ['james', 25, 'male']
+person = ['james', 25, 'secret service']
 name, age, occupation = person
 # name='james, age=25, occupation='secret service'
 ```  
