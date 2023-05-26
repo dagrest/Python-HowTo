@@ -16,9 +16,9 @@ first, second, *others = programming_languages
 ```
   
 # List generator | Dictionary/Set genarator
-```python
-# Generate list in one line
 
+* ### Generate list in one line
+```python
 mylist = [expression for i in iterable if condition]
 
 mylist1 = [i for i in range(1,4)]              # [1,2,3]
@@ -30,15 +30,16 @@ mylist3 = [i**2 for i in range(1,4)]           # [1,4,9]
 mylist4 = [i for i in range(1,4) if i%2==1]    # [1,3] - even numbers
 ```
 
+* ### Same for Set and Dictionary
 ```python
-# Same for Set and Dictionary
-
 set1 = {i for i in range(1,4)}          # {1,2,3}
 
 d1 = {i:i**2 for i in range(1,4)}       # {1:1, 2:4, 3:9}
 ```
   
 # Ternary opearator
+
+* ### Regualr block: if-elif-else
 ```python
 score = 57
 if score > 90:
@@ -49,9 +50,9 @@ else:
   grade = 'fail'
 
 # grade = 'pass'
-
-# Regualr block: if-elif-else
-
+```
+* ### if-elif-else in one line using ternary operator
+```python
 score = 57
 grade = 'A*' if score>90 else 'pass' if score>50 else 'fail'
 
@@ -70,14 +71,16 @@ class Dog():
 
   def __gt__(self, otherDog):
     return self.age > otherDog.age
-    
-    
-# __str__ defines output, when str(dog) called, happens when the Dog objects are prined
+```    
+   
+* ### `__str__` defines output, when str(dog) called, happens when the Dog objects are prined
+```python
 dog = Dog('rocky', 4)
 print(dog)    # Dog(name=rocky, age=4)
+```
 
-
-# __gt__ defines actions, when we are going to compare two dogs with '>' operator
+* ### `__gt__` defines actions, when we are going to compare two dogs with '>' operator
+```python
 dog1 = Dog('rocky', 4)
 dog2 = Dog('fifi', 2)
 print(dog1 > dog2)      # True
