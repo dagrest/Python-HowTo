@@ -57,6 +57,31 @@ grade = 'A*' if score>90 else 'pass' if score>50 else 'fail'
 
 # grade = 'pass'
 ```
+  
+### 'Magic' methods in Python classes
+```python
+class Dog():
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def __str__(self):
+    return f'Dog(name={self.name}, age={self.age})'
+
+  def __gt__(self, otherDog):
+    return self.age > otherDog.age
+    
+    
+# __str__ defines output, when str(dog) called, happens when the Dog objects are prined
+dog = Dog('rocky', 4)
+print(dog)    # Dog(name=rocky, age=4)
+
+
+# __gt__ defines actions, when we are going to compare two dogs with '>' operator
+dog1 = Dog('rocky', 4)
+dog2 = Dog('fifi', 2)
+print(dog1 > dog2)      # True
+```
 
 
 
